@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+  <title>ทายเลขหวยฟาร์มฟู๊ด</title>
+  <link rel="stylesheet" href="css/style.css" media="all">
+</head>
+<body>
+  <div class="page-content">
+    <img src="FFC_Promotion_July.jpg" onclick="July_Pro()"/>
+</div>
+
+<script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <script>
+
+    async function main() {
+      alert("โปรโมชันเราคู่กัน100 จับคู่อาหาร+เครื่องดื่มหรือเค้ก เพียง 100 บาท ส่ังเลย")
+      await liff.init({ liffId: "1656066352-lmm0w16k" })
+      // getEnvironment()
+      // getUserProfile()
+      getContext()
+      // getFriendship()
+      // createUniversalLink()
+    }
+    main()
+
+    sync function July_Pro() {
+      if (liff.getContext().type !== "none") {
+        await liff.sendMessages([
+          {
+            "type": "text",
+            "text": "เราคู่กัน"
+          },
+          {
+            "type": "text",
+            "text": "สั่งอาหาร"
+          },
+        ])
+        liff.closeWindow()
+      }
+    }
+  </script>
+</body>
+</html>

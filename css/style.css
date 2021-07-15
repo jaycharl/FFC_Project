@@ -1,0 +1,46 @@
+button {
+  background-color: #FFBC00;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 12px;
+}
+
+p {
+  border-bottom: 1px dashed #ddd
+}
+
+#pictureUrl {
+  display: block;
+  margin: 0 auto;
+  width: 12%;
+  display: -moz-box;
+  display: -webkit-box;
+  display: box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  box-pack: center;
+  box-align: center;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+}
+
+#accessToken, #utouId {
+  display: block;
+  overflow: auto
+}
+
+body {background-color: #fcf2d3;}
+
+.page-content img {
+  max-width: 100%;
+  height: auto!important;
+}

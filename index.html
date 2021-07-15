@@ -8,24 +8,13 @@
 </head>
 <body>
   <div class="page-content">
-    <img src="FFC_Promotion_July.jpg" onclick="July_Pro()"/>
+    <img src="FFC_Promotion_July.jpg" onclick="sendMsg00()"/>
 </div>
 
 <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
 
-    async function main() {
-      alert("โปรโมชันเราคู่กัน100 จับคู่อาหาร+เครื่องดื่มหรือเค้ก เพียง 100 บาท ส่ังเลย")
-      await liff.init({ liffId: "1656066352-lmm0w16k" })
-      // getEnvironment()
-      // getUserProfile()
-      getContext()
-      // getFriendship()
-      // createUniversalLink()
-    }
-    main()
-
-    sync function July_Pro() {
+sync function sendMsg00() {
       if (liff.getContext().type !== "none") {
         await liff.sendMessages([
           {
@@ -40,6 +29,19 @@
         liff.closeWindow()
       }
     }
+
+    async function main() {
+      alert("โปรโมชันเราคู่กัน100 จับคู่อาหาร+เครื่องดื่มหรือเค้ก เพียง 100 บาท ส่ังเลย")
+      await liff.init({ liffId: "1656066352-lmm0w16k" })
+      // getEnvironment()
+      // getUserProfile()
+      getContext()
+      // getFriendship()
+      // createUniversalLink()
+    }
+    main()
+
+
   </script>
 </body>
 </html>

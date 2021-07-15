@@ -9,6 +9,7 @@
   font-size: 20px;
   margin: 4px 2px;
   border-radius: 12px;
+  font-family: 'Mitr', sans-serif;
 }
 
 .button02 {
@@ -22,6 +23,21 @@
   font-size: 20px;
   margin: 4px 2px;
   border-radius: 12px;
+  font-family: 'Mitr', sans-serif;
+}
+
+.text01 {
+  background-color: #ffffff;
+  border: none;
+  color: #6B6B6B;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  border-radius: 12px;
+  font-family: 'Mitr', sans-serif;
 }
 
 p {
@@ -57,3 +73,4 @@ body {background-color: #fcf2d3;}
   max-width: 100%;
   height: auto!important;
 }
+

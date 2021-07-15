@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-  <title>ฟาร์มฟู๊ดคูซีน | โปรโมชันเราคู่กัน 100</title>
+  <title>ฟาร์มฟู๊ดคูซีน | รายการอาหารเดลิเวอรี่</title>
   <link rel="stylesheet" href="css/style.css" media="all">
   <link rel="preconnect" href="https://fonts.googleapis.com"> 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
   <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">
 </head>
-
 <body>
   <div class="page-content">
-    <img src="FFC_Promotion_July.jpg" />
+    <img src="DeliveryMenu01.jpg" />
+    <img src="DeliveryMenu02.jpg" />
+    <img src="Noodle_01.jpg" />
+    <img src="FoodBox_01.jpg" />
     <img src="Promotion_01.jpg" />
 </div>
 
@@ -20,11 +22,12 @@
   <a class="button01" href="tel:0649624691">โทรสั่งตอนนี้</a>
   <button id="btnSendMsg00" class="button01" onclick="sendMsg00()">สั่งอาหารผ่านไลน์</button>
   <br>
-  <a id="btnMenu" class="button01" href="FFC_deliverymenu.html">ดูรายการอาหารอื่นๆ</a>
+  <a id="btnMenu" class="button01" href="index.html">โปรโมชันเราคู่กัน</a>
   <br><br>
   <a class="text01" href="https://www.facebook.com/FarmFoodProject"><img src="f_logo_RGB-Blue_72.png" height="30"/> Farm Food Project</a>
   <br><br>
   <button id="btnCloseWindow" class="button02" onclick="closeWindow()">ปิดหน้าต่าง</button>
+  
 </p>
 
 <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
@@ -48,16 +51,7 @@ async function sendMsg00() {
     }
  
 
-  async function main() {
-    alert("จับคู่อาหาร+เครื่องดื่มหรือเค้ก เพียง 100 บาท ดูเมนูแล้วส่ังเลย!")
-    await liff.init({ liffId: "1656066352-273eNbOR" })
-    // getEnvironment()
-    // getUserProfile()
-    getContext()
-    // getFriendship()
-    // createUniversalLink()
-  }
-  main()
+
 </script>
 </body>
 </html>

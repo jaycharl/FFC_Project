@@ -1,12 +1,25 @@
-button {
-  background-color: #FFBC00;
+.button01 {
+  background-color: #E86F35;
   border: none;
-  color: rgb(0, 0, 0);
+  color: #ffffff;
   padding: 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 20px;
+  margin: 4px 2px;
+  border-radius: 12px;
+}
+
+.button02 {
+  background-color: #6B6B6B;
+  border: none;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
   margin: 4px 2px;
   border-radius: 12px;
 }

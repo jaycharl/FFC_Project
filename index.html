@@ -7,12 +7,13 @@
   <link rel="stylesheet" href="css/style.css" media="all">
 </head>
 <body>
-  <div class="page-content" onclick="sendMsg00()">
+  <div class="page-content">
     <img src="FFC_Promotion_July.jpg" />
 </div>
 
 <p style="text-align: center;">
-  <button id="btnCloseWindow" onclick="closeWindow()">ปิดหน้าต่าง</button>
+  <button id="btnCloseWindow" class="button02" onclick="closeWindow()">ปิดหน้าต่าง</button>
+  <button id="btnCloseWindow" class="button01" onclick="sendMsg00()">สั่งอาหาร</button>
 </p>
 
 <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
@@ -26,10 +27,6 @@ async function closeWindow() {
 async function sendMsg00() {
       if (liff.getContext().type !== "none") {
         await liff.sendMessages([
-          {
-            "type": "text",
-            "text": "เราคู่กัน"
-          },
           {
             "type": "text",
             "text": "ส่ังอาหาร"

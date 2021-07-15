@@ -11,8 +11,17 @@
     <img src="FFC_Promotion_July.jpg" />
 </div>
 
+<p style="text-align: center;">
+  <button id="btnCloseWindow" onclick="closeWindow()">ปิดหน้าต่าง</button>
+</p>
+
 <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 <script>
+async function closeWindow() {
+      if (liff.getContext().type !== "none") {
+        await liff.closeWindow()
+      }
+    }
 
 async function sendMsg00() {
       if (liff.getContext().type !== "none") {

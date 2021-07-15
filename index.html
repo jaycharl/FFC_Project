@@ -39,13 +39,25 @@
   <br>
   <a id="btnMenu" class="button01" href="FFC_deliverymenu.html">ดูรายการอาหารอื่นๆ</a>
   <br><br>
-  <a class="text01" href="https://www.facebook.com/FarmFoodProject"><img src="f_logo_RGB-Blue_72.png" height="30"/> Farm Food Project</a>
+  <a class="text01" onclick="OpenWindow()"><img src="f_logo_RGB-Blue_72.png" height="30"/> Farm Food Project</a>
   <br><br>
   <button id="btnCloseWindow" class="button02" onclick="closeWindow()">ปิดหน้าต่าง</button>
 </p>
 
 <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 <script>
+
+async function OpenWindow() {
+      if (liff.getContext().type !== "none") {
+        await liff.openWindow({
+  url: "https://www.facebook.com/FarmFoodProject",
+  external: true
+});
+      }
+    }
+
+
+
 async function closeWindow() {
       if (liff.getContext().type !== "none") {
         await liff.closeWindow()

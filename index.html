@@ -7,14 +7,14 @@
   <link rel="stylesheet" href="css/style.css" media="all">
 </head>
 <body>
-  <div class="page-content">
-    <img src="FFC_Promotion_July.jpg" onclick="sendMsg00()"/>
+  <div class="page-content" onclick="sendMsg00()">
+    <img src="FFC_Promotion_July.jpg" />
 </div>
 
 <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
-  <script>
+<script>
 
-sync function sendMsg00() {
+async function sendMsg00() {
       if (liff.getContext().type !== "none") {
         await liff.sendMessages([
           {
@@ -23,25 +23,24 @@ sync function sendMsg00() {
           },
           {
             "type": "text",
-            "text": "สั่งอาหาร"
+            "text": "ส่ังอาหาร"
           },
         ])
         liff.closeWindow()
       }
     }
+ 
 
-    async function main() {
-      alert("โปรโมชันเราคู่กัน100 จับคู่อาหาร+เครื่องดื่มหรือเค้ก เพียง 100 บาท ส่ังเลย")
-      await liff.init({ liffId: "1656066352-lmm0w16k" })
-      // getEnvironment()
-      // getUserProfile()
-      getContext()
-      // getFriendship()
-      // createUniversalLink()
-    }
-    main()
-
-
-  </script>
+  async function main() {
+    alert("โปรโมชันเราคู่กัน100 จับคู่อาหาร+เครื่องดื่มหรือเค้ก เพียง 100 บาท ดูเมนูแล้วส่ังเลย!")
+    await liff.init({ liffId: "1656066352-273eNbOR" })
+    // getEnvironment()
+    // getUserProfile()
+    getContext()
+    // getFriendship()
+    // createUniversalLink()
+  }
+  main()
+</script>
 </body>
 </html>

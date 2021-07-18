@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-  <title>ฟาร์มฟู๊ดคูซีน | โปรโมชันเราคู่กัน 100</title>
+  <title>ฟาร์มฟู๊ดคูซีน | ชี้เป้าซื้อไหนได้บ้าง ?</title>
   <link rel="stylesheet" href="css/style.css" media="all">
   <link rel="preconnect" href="https://fonts.googleapis.com"> 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -29,8 +29,8 @@
 
 <body>
   <div class="page-content" style="text-align: center;">
-    <img src="FFC_Promotion_July.jpg" />
-    <img src="Promotion_01.jpg" />
+    <img src="Maps_FFC.jpg" />
+    <a class="text01" href="https://bit.ly/FarmFoodCuisine">กดดูแผนที่</a>
 </div>
 
 <p style="text-align: center;">
@@ -38,7 +38,7 @@
   <br>
   <button id="btnSendMsg00" class="button01" onclick="sendMsg00()">สั่งอาหารผ่านไลน์</button>
   <br>
-  <a id="btnMenu" class="button01" href="H1.html">ดูรายการอาหารอื่นๆ</a>
+  <a id="btnMenu" class="button01" href="index.html">โปรโมชันเราคู่กัน</a>
   <br>
   <a id="btnMenu" class="button01" href="H2.html">ซื้อฟาร์มฟู๊ดที่ไหนได้บ้าง</a>
   <br>
@@ -46,12 +46,21 @@
   <br><br>
   <a class="text01" href="https://www.facebook.com/FarmFoodProject"><img src="f_logo_RGB-Blue_72.png" height="30"/> Farm Food Project</a>
   <br><br>
-  <button id="btnCloseWindow" class="button02" onclick="closeWindow()">ปิดหน้าต่าง</button>
+  <button id="btnCloseWindow" class="button02" onclick="closeWindow()">ปิด</button>
+  
 </p>
 
 <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 <script>
-  
+
+async function OpenWindow() {
+      if (liff.getContext().type !== "none") {
+        await liff.openWindow({
+  url: "https://www.facebook.com/FarmFoodProject",
+  external: true
+});
+      }
+    }
 async function closeWindow() {
       if (liff.getContext().type !== "none") {
         await liff.closeWindow()
@@ -69,10 +78,7 @@ async function sendMsg00() {
         liff.closeWindow()
       }
     }
- 
-
-  async function main() {
-
+    async function main() {
     await liff.init({ liffId: "1656066352-273eNbOR" })
     // getEnvironment()
     // getUserProfile()
@@ -81,6 +87,8 @@ async function sendMsg00() {
     // createUniversalLink()
   }
   main()
+
+
 </script>
 </body>
 </html>
